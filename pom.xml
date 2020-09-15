@@ -52,6 +52,16 @@
 		</dependency>
 	</dependencies>
 
+	<distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>frontend-thyme</id>
+      <name>TESTINGCorporate Repository</name>
+      <url>scp://repo/maven2</url>
+      <layout>default</layout>
+    </repository>
+    ...
+</distributionManagement>
 	
 
 </project>
