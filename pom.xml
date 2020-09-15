@@ -60,7 +60,6 @@
       <url>scp://repo/maven2</url>
       <layout>default</layout>
     </repository>
-    ...
 </distributionManagement>
 	
 
