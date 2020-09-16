@@ -51,6 +51,14 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+	
+	<repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub</name>
+            <url>https://maven.pkg.github.com/crlespinal/maven-packages/</url>
+        </repository>
+    </repositories>
 
 	
 	
