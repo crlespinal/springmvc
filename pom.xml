@@ -60,15 +60,5 @@
     </repository>
   </distributionManagement>
 	
-	<servers>
-  	<server>
-		<id>github</id>
-	    <username>crlespinal</username>
-	    <password>${env.github-token}</password>
-	</server>
-  </servers>
-
-	
-	
 
 </project>
