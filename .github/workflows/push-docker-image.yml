@@ -18,5 +18,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: crlespinal/springmvc
+          repository: crlespinal/springmvc/${{ github.head_ref }}
           tag_with_ref: true
