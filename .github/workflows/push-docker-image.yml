@@ -7,7 +7,6 @@ on:
 jobs:
   build-and-publish-tag:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' # Running this job only for tags
 
     steps:
     - uses: actions/checkout@v2
