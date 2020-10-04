@@ -1,8 +1,8 @@
 name: Push to Dockerfile
 
 on:
-  push:
-    branches: master
+  release:
+    types: [created]
     
 jobs:
   docker:
