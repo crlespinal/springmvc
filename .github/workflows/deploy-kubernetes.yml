@@ -19,6 +19,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        
       - name: Set up kubectl
         uses: matootie/dokube@v1.3.2
         with:
@@ -26,4 +29,4 @@ jobs:
           clusterName: k8s-dev-east-1
 
       - name: Apply Deployment
-        run: kubectl get ns
+        run: kubectl apply -f ${{ github.repository }}/kubernetes-manifests/front.deployment.yaml
