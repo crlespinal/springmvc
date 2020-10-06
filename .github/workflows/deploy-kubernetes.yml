@@ -26,6 +26,6 @@ jobs:
           clusterName: k8s-dev-east-1
 
       - name: Apply Deployment
-        run: kubectl apply -f ./kubernetes-manifests/front.deployment.yaml
+        run: kubectl apply -f ./${{ github.repository}}/kubernetes-manifests/front.deployment.yaml
       - name: Apply service
-        run: kubectl apply -f ./kubernetes-manifests/front.service.yaml
+        run: kubectl apply -f ./${{ github.repository}}/kubernetes-manifests/front.service.yaml
