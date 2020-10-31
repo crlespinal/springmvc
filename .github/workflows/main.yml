@@ -22,11 +22,18 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-    - name: Github Actions Releaser
-      # You may pin to the exact commit or the version.
-      # uses: raulanatol/github-actions-releaser@d75fe5f496c234e007805cee26bbd4b31ce9b890
-      uses: raulanatol/github-actions-releaser@v1.0.0
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        # The gren github token
-        GREN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
    
